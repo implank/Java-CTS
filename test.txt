@@ -1,0 +1,22 @@
+TunakTunakTun
+addLine Line13 12 13-B 200 13-A 100 13-C 300
+lineInfo Line13
+addStation Line13 13-D 400
+delStation Line13 13-B
+lineInfo Line13
+addLine Line12 10 12-A 150 12-B 250
+addLine Line12 10 12-C 200
+addStation Line12 12-C 400
+addStation Line1 1-A 10
+listLine
+addTrain K6010 Line12 12.89 80 24.67 97 36.12 8
+addTrain G6010 Line12 12.89 80 24.67 97 36.12 8
+addTrain G6010 Line12 12.89 80 24.67 97 36.12 8
+addTrain 6010 Line12 12.89 80 24.67 97 36.12 8
+addTrain G6012 Line1 12.89 80 24.67 97 36.12 8
+addTrain G6012 Line12 10.00 7 20.00 997 39.00 81
+addTrain K3337 Line12 13.00 47 23.00 90
+addTrain 07012 Line12 10.00 7 20.00 997 39.00 81
+listTrain Line12
+listTrain Line13
+listTrain Line1

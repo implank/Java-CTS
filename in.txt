@@ -1,0 +1,42 @@
+addUser
+addUser alice F 002301220990
+addUser bb M 000101220991
+addUser ii M 000101220991
+addUser b123123 M 100000720000
+addUser usfor I 100000720010
+addLine line1 3 heibei 30
+TunakTunakTun
+addLine line1 3 heibei 30 anhui 28
+lineInfo line1
+lineInfo line2
+addLine line2 4 guangzhou 1000 hunan 290 wuhan fuck
+addLine line2 4 guangzhou 1000 hunan 290 wuhan 100
+addLine line3 8 fuck 1
+listLine
+addStation line1 beijing 1
+listLine
+addTrain G0010 line2 -100.2 10 100 20 50 30
+addTrain G0010 line2 100.2 10.0 100 20 50 30
+addTrain G0010 line2 100.2 10 100.0.0 20 50 30
+addTrain G0010 line2 100.2 10 100.0 20 .0 30
+addTrain G0010 line2 100.2 10 100.0 20 0. 0
+addTrain G0010 line2 100.2 10 100.0 20 0.0 0.0
+QUIT
+checkTicket G0010 Delhi-3 hunan SB
+listTrain line2
+QUIT
+
+addUser alice F 002301220990
+Name:alice
+Sex:F
+Aadhaar:002301220990
+addUser bb M 000101220991     
+addUser ii M 000101220991     
+addUser b123123 M 100000720000
+addUser usfor I 100000720010  
+Name:bb
+Sex:M
+Aadhaar:000101220991
+Aadhaar number exist
+Name illegal
+Sex illegal
