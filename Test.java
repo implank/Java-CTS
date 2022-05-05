@@ -9,6 +9,7 @@ public class Test {
 	static Scanner in = new Scanner(System.in);
 	static String status="NormalUser";
 	static int cmd=0;
+	static User loginUser;
 	static Set<String> normalCommands = new HashSet<>();
 	static Set<String> adminCommands = new HashSet<>();
 	static{
@@ -20,6 +21,11 @@ public class Test {
 		normalCommands.add("listLine");
 		normalCommands.add("checkTicket");
 		normalCommands.add("listTrain");
+		normalCommands.add("login");
+		normalCommands.add("logout");
+		normalCommands.add("buyTicket");
+		normalCommands.add("listOrder");
+		
 
 		adminCommands.add("QUIT");
 		adminCommands.add("TunakTunakTun");
@@ -34,6 +40,10 @@ public class Test {
 		adminCommands.add("addTrain");
 		adminCommands.add("delTrain");
 		adminCommands.add("listTrain");
+		adminCommands.add("login");
+		adminCommands.add("logout");
+		adminCommands.add("buyTicket");
+		adminCommands.add("listOrder");
 	}
 	public static void main(String[] args) {
 		String argStr;
@@ -67,6 +77,10 @@ public class Test {
 			else if(arg[0].equals("delTrain"))Train.delTrain(arg);
 			else if(arg[0].equals("checkTicket"))Train.checkTicket(arg);
 			else if(arg[0].equals("listTrain"))Train.listTrain(arg);
+			else if(arg[0].equals("login"))Test.login(arg);
+			else if(arg[0].equals("logout"))Test.logout(arg);
+			else if(arg[0].equals("buyTicket"))User.buyTicket(arg);
+			else if(arg[0].equals("listOrder"))User.listOrder(arg);
 			else {
 				System.out.println(argStr);
 			}
@@ -98,6 +112,41 @@ public class Test {
 				System.out.println("Status illegal");
 			}
 		}
+	}
+	public static void login(String args[]){
+		if(args.length!=3){
+			System.out.println("Arguments illegal");
+			return;
+		}
+		if(Test.loginUser!=null){
+			System.out.println("You have logged in");
+			return;
+		}
+		User user=User.getByCardnum(args[1]);
+		if(User.checkCardnum(args[1])==false
+		||user==null){
+			System.out.println("User does not exist");
+			return;
+		}
+		if(user.name.equals(args[2])){
+			System.out.println("Login success");
+			Test.loginUser=user;
+		}
+		else{
+			System.out.println("Wrong name");
+		}
+	}
+	public static void logout(String args[]){
+		if(args.length!=1){
+			System.out.println("Arguments illegal");
+			return;
+		}
+		if(Test.loginUser==null){
+			System.out.println("No user has logged in");
+			return;
+		}
+		Test.loginUser=null;
+		System.out.println("Logout success");
 	}
 }
 

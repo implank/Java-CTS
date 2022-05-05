@@ -64,6 +64,10 @@ public class Line {
 			return ;
 		}
 		lines.remove(line);
+		for(Train train:line.trains){
+			Train.trains.remove(train);
+			train.line=null;
+		}
 		System.out.println("Del Line success");
 	}
 	public static void addStation(String args[]){

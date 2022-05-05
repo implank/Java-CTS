@@ -40,3 +40,14 @@ Aadhaar:000101220991
 Aadhaar number exist
 Name illegal
 Sex illegal
+
+
+CTS3
+TunakTunakTun
+addLine Line13 4 Dazhongshi 28 Zhichunlu 30 Wudaokou 48 Shangdi 96 Xierqi 121 Longze 148
+addTrain K1151 Line13 22 90 7 120
+addUser LaoWang M 002301220991
+login 002301220991 LaoWang
+buyTicket K1151 Zhichunlu Wudaokou 1A 10
+buyTicket K1151 Dazhongshi Shangdi 2A 20
+listOrder
