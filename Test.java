@@ -25,8 +25,11 @@ public class Test {
 		normalCommands.add("logout");
 		normalCommands.add("buyTicket");
 		normalCommands.add("listOrder");
+		normalCommands.add("rechargeBalance");
+		normalCommands.add("checkBalance");
+		normalCommands.add("cancelOrder");
+		normalCommands.add("payOrder");
 		
-
 		adminCommands.add("QUIT");
 		adminCommands.add("TunakTunakTun");
 		adminCommands.add("NutKanutKanut");
@@ -44,6 +47,11 @@ public class Test {
 		adminCommands.add("logout");
 		adminCommands.add("buyTicket");
 		adminCommands.add("listOrder");
+		adminCommands.add("rechargeBalance");
+		adminCommands.add("checkBalance");
+		adminCommands.add("importCert");
+		adminCommands.add("cancelOrder");
+		adminCommands.add("payOrder");
 	}
 	public static void main(String[] args) {
 		String argStr;
@@ -81,6 +89,11 @@ public class Test {
 			else if(arg[0].equals("logout"))Test.logout(arg);
 			else if(arg[0].equals("buyTicket"))User.buyTicket(arg);
 			else if(arg[0].equals("listOrder"))User.listOrder(arg);
+			else if(arg[0].equals("rechargeBalance"))User.rechargeBalance(arg);
+			else if(arg[0].equals("checkBalance"))User.checkBalance(arg);
+			else if(arg[0].equals("importCert"))Cert.importCert(arg);
+			else if(arg[0].equals("cancelOrder"))User.cancelOrder(arg);
+			else if(arg[0].equals("payOrder"))User.payOrder(arg);
 			else {
 				System.out.println(argStr);
 			}
